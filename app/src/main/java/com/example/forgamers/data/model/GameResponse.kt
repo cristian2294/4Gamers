@@ -1,4 +1,4 @@
-package com.example.a4gamers.data.model
+package com.example.forgamers.data.model
 
 import com.google.gson.annotations.SerializedName
 import java.util.*

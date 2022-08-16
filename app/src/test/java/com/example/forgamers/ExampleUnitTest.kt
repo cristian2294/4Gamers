@@ -1,4 +1,4 @@
-package com.example.a4gamers
+package com.example.forgamers
 
 import org.junit.Test
 
