@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">4Gamers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_name">Game Name</string>
+    <string name="game_genre">Game Genre</string>
+    <string name="game_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="game_platform">Game Platform</string>
 </resources>

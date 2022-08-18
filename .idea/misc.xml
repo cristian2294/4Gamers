@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_game.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_list.xml" value="0.2" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_game_list.xml" value="0.20616570327552985" />
       </map>
     </option>
   </component>

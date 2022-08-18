@@ -3,11 +3,6 @@ package com.example.forgamers.data.model
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
-data class GameResponse (
-    @SerializedName("games")
-    var games: List<Game>
-)
-
 data class Game(
     @SerializedName("id")
     var id: String,
