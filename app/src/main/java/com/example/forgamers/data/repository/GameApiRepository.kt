@@ -6,6 +6,7 @@ import javax.inject.Inject
 
 class GameApiRepository @Inject constructor(private val api: GameService) {
 
-    //suspend fun getAllLiveGames():GameResponse = api.getAllLiveGames()
     suspend fun getAllLiveGames():List<Game> = api.getAllLiveGames()
+
+    suspend fun getGameDetail(id: String): Game = api.getGameDetail(id)
 }

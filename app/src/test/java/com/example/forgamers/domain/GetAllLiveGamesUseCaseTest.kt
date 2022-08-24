@@ -10,6 +10,7 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
 import java.time.LocalDate
+import java.util.*
 
 class GetAllLiveGamesUseCaseTest{
 
@@ -28,7 +29,7 @@ class GetAllLiveGamesUseCaseTest{
     fun `when the API return something then get values from the API `() = runBlocking{
 
         //Given
-        val releaseDate =  LocalDate.of(2010, 1, 1)
+        @Suppress("DEPRECATION") val releaseDate =  Date(1,1,2010)
         val mockResult = Game("1","league of legendes","https//:img1.jpg",
         "short Description","https//url","genre","Pc",
             "Riot Games","Riot Games",releaseDate,"https://url2")

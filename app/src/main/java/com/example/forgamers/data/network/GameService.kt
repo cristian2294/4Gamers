@@ -12,5 +12,12 @@ class GameService @Inject constructor( private val api: GameApiClient) {
             val response = api.getAllLiveGames()
             response.body()!!
         }
-    }
+      }
+
+      suspend fun  getGameDetail(id: String): Game{
+        return withContext(Dispatchers.IO){
+            val response = api.getGameDetail(id)
+            response.body()!!
+        }
+      }
 }

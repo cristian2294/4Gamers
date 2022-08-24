@@ -2,6 +2,7 @@ package com.example.forgamers.data.model
 
 import com.google.gson.annotations.SerializedName
 import java.time.LocalDate
+import java.util.*
 
 data class Game(
     @SerializedName("id")
@@ -23,10 +24,10 @@ data class Game(
     @SerializedName("developer")
     var developer: String,
     @SerializedName("release_date")
-    var releaseDate: LocalDate,
+    var releaseDate: Date,
     @SerializedName("freetogame_profile_url")
     var freeToGameProfileUrl: String,
 
 
-)
+    )
 

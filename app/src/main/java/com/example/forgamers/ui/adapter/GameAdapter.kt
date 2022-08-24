@@ -20,8 +20,12 @@ class GameAdapter(private val context: Context,
     }
 
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
+
         val game = gameList[position]
         val urlGameImage = game.thumbnail
+
+        // implements method when the user click an item
+        holder.render(game.id)
 
         holder.gameName.text = game.title
         holder.gameGenre.text = game.genre
