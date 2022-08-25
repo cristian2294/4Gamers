@@ -6,4 +6,6 @@
     <string name="game_genre">Game Genre</string>
     <string name="game_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="game_platform">Game Platform</string>
+    <string name="placeholder_developer">developer</string>
+    <string name="game_developer">Game Developer</string>
 </resources>
