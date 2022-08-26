@@ -6,6 +6,9 @@
     <string name="game_genre">Game Genre</string>
     <string name="game_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="game_platform">Game Platform</string>
-    <string name="placeholder_developer">developer</string>
+    <string name="placeholder_developer">Developer</string>
     <string name="game_developer">Game Developer</string>
+    <string name="release_date">Release Date</string>
+    <string name="date">01/01/2020</string>
+    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</string>
 </resources>

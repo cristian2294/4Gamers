@@ -28,6 +28,8 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var tvGameName : TextView
     private lateinit var tvGameGenre : TextView
     private lateinit var tvGameDeveloper : TextView
+    private lateinit var tvGameReleaseDate : TextView
+    private lateinit var tvGameDescription : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +41,6 @@ class GameDetailActivity : AppCompatActivity() {
         val intent = intent
         val gameId = intent.getStringExtra("gameId")!!
 
-
         gameDetailViewModel.getGameDetail(gameId)
 
         // Create the observer which updates the UI.
@@ -48,6 +49,9 @@ class GameDetailActivity : AppCompatActivity() {
             tvGameName.text = game.title
             tvGameGenre.text = game.genre
             tvGameDeveloper.text = game.developer
+            tvGameReleaseDate.text = game.releaseDate.toString()
+            tvGameDescription.text = game.shortDescription
+
 
             val ulrImage = game.thumbnail
             Glide.with(this)
@@ -66,5 +70,7 @@ class GameDetailActivity : AppCompatActivity() {
         tvGameName = binding.tvGameDetailName
         tvGameGenre = binding.tvGameDetailGenre
         tvGameDeveloper = binding.tvGameDetailDeveloper
+        tvGameReleaseDate = binding.tvGameDetailReleaseDate
+        tvGameDescription = binding.tvGameDetailDescription
     }
 }

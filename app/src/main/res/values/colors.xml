@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="placeholder">#9EB0BA</color>
+
+    // UNDERLINE
+    <color name="underline">#D8D6D6</color>
 </resources>
