@@ -1,7 +1,9 @@
 package com.example.forgamers.ui.view
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
@@ -35,6 +37,12 @@ class GameDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitylGameDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        }
 
         initUI()
 

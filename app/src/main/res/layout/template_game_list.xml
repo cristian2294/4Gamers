@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
+    app:cardElevation="4dp"
     android:layout_margin="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +28,7 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_game"
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/game_name"
+            android:fontFamily="@font/open_sans"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"/>
@@ -36,12 +37,17 @@
             android:id="@+id/tv_game_genre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/iv_game"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/game_genre_box"
+            android:fontFamily="@font/open_sans"
+            android:padding="4dp"
             android:text="@string/game_genre"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="4dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_game_platform"
+            app:layout_constraintTop_toBottomOf="@+id/iv_game"
+            app:layout_constraintVertical_bias="0.934" />
 
         <TextView
             android:id="@+id/tv_game_description"
@@ -49,18 +55,21 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tv_game_name"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"
-            android:text="@string/game_description"/>
+            android:padding="8dp"
+            android:text="@string/game_description"
+            android:fontFamily="@font/open_sans"/>
 
-        <TextView
-            android:id="@+id/tv_game_platform"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/iv_game_platform"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_game_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/game_platform"
-            android:layout_margin="4dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_windows"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

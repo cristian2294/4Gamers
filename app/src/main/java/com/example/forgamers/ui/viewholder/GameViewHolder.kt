@@ -14,7 +14,6 @@ class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     var gameName = binding.tvGameName
     var gameGenre = binding.tvGameGenre
     var gameDescription = binding.tvGameDescription
-    var gamePlatform = binding.tvGamePlatform
 
     fun render(id: String){
         itemView.setOnClickListener{

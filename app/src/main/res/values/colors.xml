@@ -12,4 +12,7 @@
 
     // UNDERLINE
     <color name="underline">#D8D6D6</color>
+    
+    //Theme Light
+    <color name="button_blue">#21209C</color>
 </resources>

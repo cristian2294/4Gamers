@@ -30,7 +30,7 @@ class GameAdapter(private val context: Context,
         holder.gameName.text = game.title
         holder.gameGenre.text = game.genre
         holder.gameDescription.text = game.shortDescription
-        holder.gamePlatform.text = game.platform
+
         Glide.with(context)
             .load(urlGameImage)
             .centerCrop()
