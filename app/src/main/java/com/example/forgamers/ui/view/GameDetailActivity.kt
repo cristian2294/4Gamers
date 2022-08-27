@@ -58,7 +58,7 @@ class GameDetailActivity : AppCompatActivity() {
             tvGameGenre.text = game.genre
             tvGameDeveloper.text = game.developer
             tvGameReleaseDate.text = game.releaseDate.toString()
-            tvGameDescription.text = game.shortDescription
+            tvGameDescription.text = game.description
 
 
             val ulrImage = game.thumbnail

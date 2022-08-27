@@ -1,33 +1,33 @@
 package com.example.forgamers.data.model
 
 import com.google.gson.annotations.SerializedName
-import java.time.LocalDate
 import java.util.*
 
 data class Game(
     @SerializedName("id")
-    var id: String,
+    val id: String,
     @SerializedName("title")
-    var title: String,
+    val title: String,
     @SerializedName("thumbnail")
-    var thumbnail: String,
+    val thumbnail: String,
     @SerializedName("short_description")
-    var shortDescription: String,
+    val shortDescription: String,
     @SerializedName("game_url")
-    var gameUrl: String,
+    val gameUrl: String,
     @SerializedName("genre")
-    var genre: String,
+    val genre: String,
     @SerializedName("platform")
-    var platform: String,
+    val platform: String,
     @SerializedName("publisher")
-    var publisher: String,
+    val publisher: String,
     @SerializedName("developer")
-    var developer: String,
+    val developer: String,
     @SerializedName("release_date")
-    var releaseDate: Date,
+    val releaseDate: Date,
     @SerializedName("freetogame_profile_url")
-    var freeToGameProfileUrl: String,
-
+    val freeToGameProfileUrl: String,
+    @SerializedName("description")
+    val description: String
 
     )
 
