@@ -32,7 +32,7 @@ class GetAllLiveGamesUseCaseTest{
         @Suppress("DEPRECATION") val releaseDate =  Date(1,1,2010)
         val mockResult = Game("1","league of legendes","https//:img1.jpg",
         "short Description","https//url","genre","Pc",
-            "Riot Games","Riot Games",releaseDate,"https://url2")
+            "Riot Games","Riot Games",releaseDate,"https://url2","description")
         val mockListGames = listOf(mockResult)
         coEvery { gameApiRepository.getAllLiveGames() } returns mockListGames
 

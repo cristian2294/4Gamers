@@ -48,7 +48,7 @@ class GameViewModelTest(){
         @Suppress("DEPRECATION") val mockReleaseDate = Date(2010,1,1)
         val mockGame = Game("1","game 1","https://image.png","shortDescp",
             "https://url","genre","windows","publisher","developer",
-            mockReleaseDate,"https://url")
+            mockReleaseDate,"https://url","description")
         val mockResponse = listOf(mockGame)
         coEvery { getAllLiveGamesUseCase() } returns mockResponse
 
