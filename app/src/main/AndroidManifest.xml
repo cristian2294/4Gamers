@@ -4,7 +4,7 @@
     package="com.example.forgamers">
 
     <application
-        android:name=".GamersApplication"
+        android:name=".data.database.GamersApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
