@@ -6,25 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.GameActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/listGameFragment"
-        android:name="com.example.forgamers.ui.fragment.GameListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="630dp"
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/game_menu"/>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/gameMenuFragment"
-        android:name="com.example.forgamers.ui.fragment.GameMenuFragment"
-        android:layout_width="match_parent"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/game_menu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listGameFragment"
-        app:layout_constraintVertical_bias="0.0" />
+        app:menu="@menu/bottom_nam_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

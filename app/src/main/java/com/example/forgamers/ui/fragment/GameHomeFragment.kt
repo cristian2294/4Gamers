@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class GameListFragment : Fragment() {
+class GameHomeFragment : Fragment() {
 
     private var _binding: FragmentGameListBinding? = null
     private val binding get() = _binding!!
