@@ -4,24 +4,45 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.example.forgamers.data.database.GamersApplication
+import com.example.forgamers.data.database.entities.GameFavEntity
 import com.example.forgamers.data.model.Game
 import com.example.forgamers.databinding.ActivitylGameDetailBinding
+import com.example.forgamers.domain.AddFavoriteGameUseCase
+import com.example.forgamers.domain.GetGameDetailUseCase
+import com.example.forgamers.domain.RemoveFavoriteGameUseCase
 import com.example.forgamers.ui.viewmodel.GameDetailViewModel
+import com.example.forgamers.ui.viewmodel.GameDetailViewModelFactory
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
 class GameDetailActivity : AppCompatActivity() {
 
+    // Inject
+    @Inject lateinit var getGameDetailUseCase: GetGameDetailUseCase
+    @Inject lateinit var addFavoriteGameUseCase: AddFavoriteGameUseCase
+    @Inject lateinit var removeFavoriteGameUseCase: RemoveFavoriteGameUseCase
+
     // viewBinding
     private lateinit var binding: ActivitylGameDetailBinding
 
     // Init VM
-    private val gameDetailViewModel : GameDetailViewModel by viewModels()
+    private val gameDetailViewModel : GameDetailViewModel by viewModels{
+        GameDetailViewModelFactory((application as GamersApplication)
+            .repository,
+            getGameDetailUseCase,
+            addFavoriteGameUseCase,
+            removeFavoriteGameUseCase
+        )
+    }
 
     // UI variables
     private lateinit var ivGameDetail : ImageView
@@ -30,6 +51,7 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var tvGameDeveloper : TextView
     private lateinit var tvGameReleaseDate : TextView
     private lateinit var tvGameDescription : TextView
+    private lateinit var btnFavGame : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +89,8 @@ class GameDetailActivity : AppCompatActivity() {
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(ivGameDetail)
+
+            btnFavGame.setOnClickListener { addFavoriteGame(game) }
         }
 
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
@@ -80,5 +104,22 @@ class GameDetailActivity : AppCompatActivity() {
         tvGameDeveloper = binding.tvGameDetailDeveloper
         tvGameReleaseDate = binding.tvGameDetailReleaseDate
         tvGameDescription = binding.tvGameDetailDescription
+        btnFavGame = binding.btnAddFavorites
     }
+
+    private fun addFavoriteGame(game: Game) {
+        val gameFavEntity = GameFavEntity(
+            game.id.toInt(),
+            game.title,
+            game.thumbnail,
+            game.shortDescription,
+            game.genre,
+            game.platform,
+            game.developer
+        )
+        gameDetailViewModel.addFavoriteGame(gameFavEntity)
+        val messageSucces = "Game has been added to your favorites successfully."
+        Toast.makeText(this,messageSucces, Toast.LENGTH_SHORT).show()
+    }
+
 }
