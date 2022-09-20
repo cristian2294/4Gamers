@@ -14,6 +14,7 @@ import com.example.forgamers.data.database.entities.GameFavEntity
 import com.example.forgamers.data.model.Game
 import com.example.forgamers.databinding.ActivitylGameDetailBinding
 import com.example.forgamers.domain.AddFavoriteGameUseCase
+import com.example.forgamers.domain.GetAllFavoriteGamesUseCase
 import com.example.forgamers.domain.GetGameDetailUseCase
 import com.example.forgamers.domain.RemoveFavoriteGameUseCase
 import com.example.forgamers.ui.viewmodel.GameDetailViewModel
@@ -30,6 +31,7 @@ class GameDetailActivity : AppCompatActivity() {
     @Inject lateinit var getGameDetailUseCase: GetGameDetailUseCase
     @Inject lateinit var addFavoriteGameUseCase: AddFavoriteGameUseCase
     @Inject lateinit var removeFavoriteGameUseCase: RemoveFavoriteGameUseCase
+    @Inject lateinit var getAllFavoriteGamesUseCase: GetAllFavoriteGamesUseCase
 
     // viewBinding
     private lateinit var binding: ActivitylGameDetailBinding
@@ -40,7 +42,8 @@ class GameDetailActivity : AppCompatActivity() {
             .repository,
             getGameDetailUseCase,
             addFavoriteGameUseCase,
-            removeFavoriteGameUseCase
+            removeFavoriteGameUseCase,
+            getAllFavoriteGamesUseCase
         )
     }
 

@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/corner_images.xml" value="0.1465" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/favorite_selector.xml" value="0.1465" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/game_genre_box.xml" value="0.172" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/ic_category.xml" value="0.1855" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/ic_favoite_fill.xml" value="0.1465" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/ic_favorite_empty.xml" value="0.1465" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/ic_favorites.xml" value="0.155" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/ic_windows.xml" value="0.1" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/if_favoite_fill.xml" value="0.1465" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/drawable/iv_round_corner_bottom.xml" value="0.1165" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_game.xml" value="0.25" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
@@ -14,7 +20,9 @@
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_favorite.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_list.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_menu.xml" value="0.33" />
-        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_game_list.xml" value="0.33" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_favorite_game_list.xml" value="0.25" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_game_list.xml" value="0.25" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/menu/bottom_nam_menu.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/menu/menu.xml" value="0.19895833333333332" />
       </map>
     </option>

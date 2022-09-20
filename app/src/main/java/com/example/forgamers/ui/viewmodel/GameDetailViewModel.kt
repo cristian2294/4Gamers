@@ -1,13 +1,11 @@
 package com.example.forgamers.ui.viewmodel
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.forgamers.data.database.entities.GameFavEntity
 import com.example.forgamers.data.model.Game
 import com.example.forgamers.data.repository.GameRoomRepository
 import com.example.forgamers.domain.AddFavoriteGameUseCase
+import com.example.forgamers.domain.GetAllFavoriteGamesUseCase
 import com.example.forgamers.domain.GetGameDetailUseCase
 import com.example.forgamers.domain.RemoveFavoriteGameUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,10 +19,13 @@ class GameDetailViewModel @Inject constructor(
     private val repository: GameRoomRepository,
     private val getGameDetailUseCase: GetGameDetailUseCase,
     private val addFavoriteGameUseCase: AddFavoriteGameUseCase,
-    private val removeFavoriteGameUseCase: RemoveFavoriteGameUseCase
+    private val removeFavoriteGameUseCase: RemoveFavoriteGameUseCase,
+    private val getAllFavoriteGamesUseCase: GetAllFavoriteGamesUseCase
 ): ViewModel() {
 
     val gameModel = MutableLiveData<Game>()
+
+    private lateinit var allFavoriteGame : LiveData<List<GameFavEntity>>
 
     fun getGameDetail(id: String){
         viewModelScope.launch {
@@ -52,13 +53,19 @@ class GameDetailViewModel @Inject constructor(
             removeFavoriteGameUseCase(gameFavEntity)
         }
     }
+
+    fun getAllFavoriteGames(): LiveData<List<GameFavEntity>> {
+        allFavoriteGame =  getAllFavoriteGamesUseCase.getFavoriteGames()
+        return allFavoriteGame
+    }
 }
 
 class GameDetailViewModelFactory @Inject constructor(
     private val repository: GameRoomRepository,
     private val getGameDetailUseCase: GetGameDetailUseCase,
     private val addFavoriteGameUseCase: AddFavoriteGameUseCase,
-    private val removeFavoriteGameUseCase: RemoveFavoriteGameUseCase
+    private val removeFavoriteGameUseCase: RemoveFavoriteGameUseCase,
+    private val getAllFavoriteGamesUseCase: GetAllFavoriteGamesUseCase
 ): ViewModelProvider.Factory{
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -68,7 +75,8 @@ class GameDetailViewModelFactory @Inject constructor(
                 repository,
                 getGameDetailUseCase,
                 addFavoriteGameUseCase,
-                removeFavoriteGameUseCase
+                removeFavoriteGameUseCase,
+                getAllFavoriteGamesUseCase
             ) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")

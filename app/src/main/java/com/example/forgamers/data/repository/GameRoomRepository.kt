@@ -17,7 +17,7 @@ class GameRoomRepository @Inject constructor( private val gameFavDAO: GameFavDAO
     // off the main thread.
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
-    suspend fun addFavoritePokemon(gameFavEntity: GameFavEntity) {
+    suspend fun addFavoriteGame(gameFavEntity: GameFavEntity) {
         gameFavDAO.addFavoriteGame(gameFavEntity)
     }
 

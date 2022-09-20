@@ -6,5 +6,5 @@ import javax.inject.Inject
 
 class AddFavoriteGameUseCase @Inject constructor(private val repository: GameRoomRepository) {
 
-    suspend operator fun invoke(gameFavEntity: GameFavEntity) = repository.addFavoritePokemon(gameFavEntity)
+    suspend operator fun invoke(gameFavEntity: GameFavEntity) = repository.addFavoriteGame(gameFavEntity)
 }
