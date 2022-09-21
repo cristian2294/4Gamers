@@ -24,7 +24,7 @@ class FavoriteGameAdapter(private val gameDetailViewModel: GameDetailViewModel
             .inflate(R.layout.template_favorite_game_list, parent, false)
 
         context = parent.context
-        return FavoriteGameViewHolder(layoutView)
+        return FavoriteGameViewHolder(layoutView, context)
     }
 
     override fun onBindViewHolder(holder: FavoriteGameViewHolder, position: Int) {
@@ -42,10 +42,13 @@ class FavoriteGameAdapter(private val gameDetailViewModel: GameDetailViewModel
             .into(holder.ivFavGame)
 
         holder.btnFavGame.setOnClickListener {
-            if (holder.btnFavGame.isChecked == false){
+            if (!holder.btnFavGame.isChecked){
                 removeFavoriteGame(favoriteGame)
             }
         }
+
+        // implements method when the user click a button "Go to Website"
+        holder.render(favoriteGame.gameUrl)
     }
 
     private fun removeFavoriteGame(favoriteGame: GameFavEntity) {

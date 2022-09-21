@@ -21,5 +21,7 @@ data class GameFavEntity(
     @ColumnInfo(name = "platform")
     val platform: String,
     @ColumnInfo(name = "developer")
-    val developer: String
+    val developer: String,
+    @ColumnInfo(name = "game_url")
+    val gameUrl: String
 )

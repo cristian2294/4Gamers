@@ -16,7 +16,6 @@
     //Theme Light
     <color name="button_blue">#21209C</color>
 
-    <color name="favorite">#fa3d22</color>
+    <color name="favorite">#e50c34</color>
     <color name="container">#f8f8f8</color>
-
 </resources>

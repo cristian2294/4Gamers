@@ -118,11 +118,12 @@ class GameDetailActivity : AppCompatActivity() {
             game.shortDescription,
             game.genre,
             game.platform,
-            game.developer
+            game.developer,
+            game.gameUrl
         )
         gameDetailViewModel.addFavoriteGame(gameFavEntity)
-        val messageSucces = "Game has been added to your favorites successfully."
-        Toast.makeText(this,messageSucces, Toast.LENGTH_SHORT).show()
+        val messageSuccess = "Game has been added to your favorites successfully."
+        Toast.makeText(this,messageSuccess, Toast.LENGTH_SHORT).show()
     }
 
 }
