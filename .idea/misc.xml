@@ -17,13 +17,15 @@
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_game.xml" value="0.25" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/activityl_game_detail.xml" value="0.25" />
-        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_category.xml" value="0.25" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_category.xml" value="0.22" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_favorite.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_list.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/fragment_game_menu.xml" value="0.33" />
-        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/item_row_category.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/item_row_category.xml" value="0.25" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_favorite_game_list.xml" value="0.33" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_game_category.xml" value="0.22" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_game_list.xml" value="0.25" />
+        <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/layout/template_row_game_category_catalog.xml" value="0.25" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/menu/bottom_nam_menu.xml" value="0.2" />
         <entry key="..\:/Users/CRISTIAN/AndroidStudioProjects/4Gamers/app/src/main/res/menu/menu.xml" value="0.19895833333333332" />
       </map>

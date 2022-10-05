@@ -1,5 +1,5 @@
 package com.example.forgamers.data.model
 
-data class CategoryGame(
+data class GameCategory(
     val categoryName: String
 )

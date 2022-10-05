@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.forgamers.data.model.AllCategoryGame
-import com.example.forgamers.data.model.CategoryGame
+import com.example.forgamers.data.model.GameCategoryCatalog
+import com.example.forgamers.data.model.GameCategory
 import com.example.forgamers.databinding.FragmentGameCategoryBinding
-import com.example.forgamers.ui.adapter.AllCategoryGameAdapter
+import com.example.forgamers.ui.adapter.GameCategoryCatalogAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,7 +21,7 @@ class GameCategoryFragment : Fragment() {
 
     // variables for recyclerView
     private var allCategoryRv : RecyclerView? = null
-    private lateinit var allCategoryGameAdapter: AllCategoryGameAdapter
+    private lateinit var gameCategoryCatalogAdapter: GameCategoryCatalogAdapter
     private lateinit var layoutManager: RecyclerView.LayoutManager
 
     override fun onCreateView(
@@ -36,26 +36,21 @@ class GameCategoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val allCategory: MutableList<AllCategoryGame> = ArrayList()
-        val categoryShooter = listOf(CategoryGame("game1"), CategoryGame("game2"))
-        allCategory.add(AllCategoryGame("shooter",categoryShooter))
-        val categoryStrategy = listOf(CategoryGame("game1"), CategoryGame("game2"))
-        allCategory.add(AllCategoryGame("strategy",categoryStrategy))
-        //allCategory.add(CategoryGame("shooter"))
-        //allCategory.add(CategoryGame("strategy"))
-        //allCategory.add(CategoryGame("MOBA"))
+        val allCategory: MutableList<GameCategoryCatalog> = ArrayList()
+        val categoryShooter = listOf(GameCategory("game1"), GameCategory("game2"))
+        allCategory.add(GameCategoryCatalog("shooter",categoryShooter))
+        val categoryStrategy = listOf(GameCategory("game1"), GameCategory("game2"), GameCategory("game3"))
+        allCategory.add(GameCategoryCatalog("strategy",categoryStrategy))
 
-        allCategoryRv = binding.rvParentCategory
-
-        setAllCategoryRecycler(allCategory,view)
-
+        allCategoryRv = binding.rvGameCategoryCatalog
+        setAllCategoryCatalogRecycler(allCategory,view)
     }
 
     // provides the setup for the all game categories and show it in the recyclerview
-    private fun setAllCategoryRecycler(allCategory: List<AllCategoryGame>, view : View){
+    private fun setAllCategoryCatalogRecycler(listGameCategoryCatalog: List<GameCategoryCatalog>, view : View){
         layoutManager = LinearLayoutManager(view.context)
         allCategoryRv?.layoutManager = layoutManager
-        allCategoryGameAdapter = AllCategoryGameAdapter(view.context,allCategory)
-        allCategoryRv?.adapter = allCategoryGameAdapter
+        gameCategoryCatalogAdapter = GameCategoryCatalogAdapter(view.context,listGameCategoryCatalog)
+        allCategoryRv?.adapter = gameCategoryCatalogAdapter
     }
 }
