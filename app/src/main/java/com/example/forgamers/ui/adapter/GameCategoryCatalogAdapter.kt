@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forgamers.R
-import com.example.forgamers.data.model.GameCategory
+import com.example.forgamers.data.model.Game
 import com.example.forgamers.data.model.GameCategoryCatalog
 import com.example.forgamers.ui.viewholder.GameCategoryCatalogViewHolder
 
@@ -30,8 +30,8 @@ class GameCategoryCatalogAdapter(private val context: Context,
     override fun getItemCount(): Int  = gameCategoryCatalogList.size
 
     //provides setup for child Recycler "GameCategory"
-    private fun setGameCategoryRecycler(recyclerView: RecyclerView, gameCategoryList: List<GameCategory>){
-        val gameCategoryAdapter =  GameCategoryAdapter(context,gameCategoryList)
+    private fun setGameCategoryRecycler(recyclerView: RecyclerView, gameList: List<Game>){
+        val gameCategoryAdapter =  GameCategoryAdapter(context,gameList)
         recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         recyclerView.adapter = gameCategoryAdapter
     }

@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forgamers.R
-import com.example.forgamers.data.model.GameCategory
+import com.example.forgamers.data.model.Game
 import com.example.forgamers.ui.viewholder.GameCategoryViewHolder
 
 class GameCategoryAdapter(
     private val context: Context,
-    private val gameCategoryList: List<GameCategory>
+    private val gameCategoryList: List<Game>
 ): RecyclerView.Adapter<GameCategoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameCategoryViewHolder {
@@ -25,7 +25,7 @@ class GameCategoryAdapter(
 
         val category = gameCategoryList[position]
 
-        holder.nameCat.text = category.categoryName
+        holder.nameCat.text = category.title
     }
 
     override fun getItemCount(): Int = gameCategoryList.size
