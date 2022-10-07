@@ -8,5 +8,5 @@ class GameCategoryViewHolder(view: View): RecyclerView.ViewHolder(view)  {
 
     private val binding = TemplateGameCategoryBinding.bind(view)
 
-    val nameCat = binding.tvGameCategoryName
+    val ivGameCategory = binding.ivGameCategory
 }

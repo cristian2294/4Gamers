@@ -12,4 +12,7 @@ interface GameApiClient {
 
     @GET("game?")
     suspend fun getGameDetail(@Query("id") id: String): Response<Game>
+
+    @GET("games?")
+    suspend fun getGamesByCategory(@Query("category") category: String): Response<List<Game>>
 }

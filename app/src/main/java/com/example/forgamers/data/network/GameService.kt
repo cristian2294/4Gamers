@@ -20,4 +20,11 @@ class GameService @Inject constructor( private val api: GameApiClient) {
             response.body()!!
         }
       }
+
+    suspend fun getGamesByCategory(category: String): List<Game>{
+        return withContext(Dispatchers.IO){
+            val response = api.getGamesByCategory(category)
+            response.body()!!
+        }
+    }
 }

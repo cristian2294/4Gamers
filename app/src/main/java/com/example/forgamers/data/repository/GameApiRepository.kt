@@ -9,4 +9,6 @@ class GameApiRepository @Inject constructor(private val api: GameService) {
     suspend fun getAllLiveGames():List<Game> = api.getAllLiveGames()
 
     suspend fun getGameDetail(id: String): Game = api.getGameDetail(id)
+
+    suspend fun getGamesByCategory(category: String): List<Game> = api.getGamesByCategory(category)
 }
