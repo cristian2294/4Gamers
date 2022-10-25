@@ -29,6 +29,8 @@ class GameCategoryFragment : Fragment() {
     private lateinit var gameCategoryCatalogAdapter: GameCategoryCatalogAdapter
     private lateinit var layoutManager: RecyclerView.LayoutManager
 
+    private lateinit var gameCategoryObserver : Observer<List<Game>>
+
     //Init VM
     private val gameCategoryViewModel : GameCategoryViewModel by viewModels()
 
@@ -46,23 +48,24 @@ class GameCategoryFragment : Fragment() {
 
         allCategoryRv = binding.rvGameCategoryCatalog
 
-        val gameCategoryList = listOf("MMORPG","shooter","MOBA","Anime","Strategy","Fantasy","Racing")
+        val categoryCatalogList: MutableList<GameCategoryCatalog> = ArrayList()
+        gameCategoryViewModel.getAllGameCategories()
 
-        gameCategoryViewModel.getGamesByCategory("Anime")
+        val gameCatalogObserver = Observer<List<String>>{ catalogResponse ->
+            catalogResponse.forEach {
 
-        val gameCategoryObserver = Observer<List<Game>>{ gameCategoryResponse ->
+                gameCategoryViewModel.getGamesByCategory(it)
 
-            val categoryCatalogList: MutableList<GameCategoryCatalog> = ArrayList()
-
-            for (i in gameCategoryList.indices){
-                //gameCategoryViewModel.getGamesByCategory(gameCategoryList[i]) PELIGRO
-                categoryCatalogList.add(GameCategoryCatalog(gameCategoryList[i],gameCategoryResponse))
+                gameCategoryObserver = Observer<List<Game>>{ gameCategoryResponse ->
+                    categoryCatalogList.add(GameCategoryCatalog(it,gameCategoryResponse))
+                    setAllCategoryCatalogRecycler(categoryCatalogList,view)
+                }
             }
-            setAllCategoryCatalogRecycler(categoryCatalogList,view)
+            // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+            gameCategoryViewModel.gameCategoryModel.observe(viewLifecycleOwner,gameCategoryObserver)
         }
-
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
-        gameCategoryViewModel.gameCategoryModel.observe(viewLifecycleOwner,gameCategoryObserver)
+        gameCategoryViewModel.gameCatalogModel.observe(viewLifecycleOwner,gameCatalogObserver)
     }
 
     // provides the setup for the all game categories and show it in the recyclerview
