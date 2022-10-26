@@ -23,7 +23,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-
 @AndroidEntryPoint
 class GameDetailActivity : AppCompatActivity() {
 
@@ -55,6 +54,7 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var tvGameReleaseDate : TextView
     private lateinit var tvGameDescription : TextView
     private lateinit var btnFavGame : FloatingActionButton
+    private lateinit var tvBack : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,6 +98,10 @@ class GameDetailActivity : AppCompatActivity() {
 
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         gameDetailViewModel.gameModel.observe(this, gameObserver)
+
+        tvBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun initUI() {
@@ -108,6 +112,7 @@ class GameDetailActivity : AppCompatActivity() {
         tvGameReleaseDate = binding.tvGameDetailReleaseDate
         tvGameDescription = binding.tvGameDetailDescription
         btnFavGame = binding.btnAddFavorites
+        tvBack = binding.tvBack
     }
 
     private fun addFavoriteGame(game: Game) {
@@ -125,5 +130,4 @@ class GameDetailActivity : AppCompatActivity() {
         val messageSuccess = "Game has been added to your favorites successfully."
         Toast.makeText(this,messageSuccess, Toast.LENGTH_SHORT).show()
     }
-
 }

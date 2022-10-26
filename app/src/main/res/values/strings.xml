@@ -16,4 +16,5 @@
     <string name="categories">Categories</string>
     <string name="go_to_website">Go to Website</string>
     <string name="title_categories">Categories</string>
+    <string name="back"><![CDATA[<]]></string>
 </resources>
