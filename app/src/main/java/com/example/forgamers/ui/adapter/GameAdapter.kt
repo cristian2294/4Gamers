@@ -11,7 +11,7 @@ import com.example.forgamers.data.model.Game
 import com.example.forgamers.ui.viewholder.GameViewHolder
 
 class GameAdapter(private val context: Context,
-    private val gameList: List<Game>) : RecyclerView.Adapter<GameViewHolder>() {
+    private var gameList: List<Game>) : RecyclerView.Adapter<GameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameViewHolder {
         val layoutView = LayoutInflater.from(parent.context)
@@ -40,4 +40,11 @@ class GameAdapter(private val context: Context,
 
     // return list size
     override fun getItemCount(): Int = gameList.size
+
+    //change the list when in the activity or fragment founds a filtered items
+    fun setFilteredList(filteredList: List<Game>){
+        gameList = filteredList
+        notifyDataSetChanged()
+
+    }
 }
