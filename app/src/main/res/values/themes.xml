@@ -20,7 +20,7 @@
     
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/imagesplashcontrol</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splashcontrol</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Theme.4Gamers</item>
     </style>
