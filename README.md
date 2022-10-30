@@ -58,4 +58,4 @@ here share with you some screenshots:
 ![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img4.jpeg)
 
 #### Categories
-![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img5.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img5.png)
