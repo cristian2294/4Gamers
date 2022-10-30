@@ -45,7 +45,7 @@ here share with you some screenshots:
 
 #### Splash Screen
 
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img0.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img0.jpeg)
 
 #### Home
 ![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img1.jpeg)
