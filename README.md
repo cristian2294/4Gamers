@@ -48,14 +48,14 @@ here share with you some screenshots:
 ![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img0.jpeg)
 
 #### Home
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img1.jpeg)
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img2.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img1.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img2.jpeg)
 
 #### Detail
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img3.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img3.jpeg)
 
 #### Favorites
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img4.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img4.jpeg)
 
 #### Categories
-![ScreenShot](https://github.com/cristian2294/4Gamers/tree/main/app/src/main/res/drawable/img5.jpeg)
+![ScreenShot](https://github.com/cristian2294/4Gamers/blob/main/app/src/main/res/drawable/img5.jpeg)
