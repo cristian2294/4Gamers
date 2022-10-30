@@ -99,4 +99,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
     androidTestImplementation "androidx.room:room-testing:$roomVersion"
 
+    //Justify Text
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+
 }
